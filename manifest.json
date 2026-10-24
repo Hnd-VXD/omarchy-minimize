@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.hnd-vxd.minimize",
+  "name": "Minimized Windows",
+  "version": "1.0.0",
+  "author": "HnD-VXD",
+  "license": "MIT",
+  "description": "Minimize windows to the bar and restore them with a click. Keybindings for minimize, minimize others and restore all.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "MinimizedWindows.qml"
+  },
+  "barWidget": {
+    "displayName": "Minimized Windows",
+    "description": "Windows minimized from this workspace: click to restore, right-click to close",
+    "category": "Windows",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}
