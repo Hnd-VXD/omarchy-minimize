@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.hnd-vxd.minimize",
   "name": "Minimized Windows",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "HnD-VXD",
   "license": "MIT",
   "description": "Minimize windows to the bar and restore them with a click. Keybindings for minimize, minimize others and restore all.",

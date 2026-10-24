@@ -217,6 +217,19 @@ BarWidget {
   }
   Component.onCompleted: root.refresh()
 
+  // Hyprland shows a special workspace whenever one of its windows gets
+  // focus, e.g. when it hands focus back to a minimized window after a bar
+  // popup closes. Hide a minimized workspace again as soon as it appears.
+  Connections {
+    target: Hyprland
+    function onRawEvent(event) {
+      if (event.name !== "activespecial") return
+      var name = String(event.data).split(",")[0]
+      if (name.indexOf(root.hiddenWorkspace) !== 0) return
+      root.dispatch('hl.dsp.workspace.toggle_special("' + name.slice("special:".length) + '")')
+    }
+  }
+
   Row {
     id: row
     anchors.verticalCenter: parent.verticalCenter
